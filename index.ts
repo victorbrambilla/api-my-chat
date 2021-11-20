@@ -38,7 +38,7 @@ app.post('/photo',isLogged, upload.single('foto'), (req:any, res:any)=>{
       user:req.body.user,
       message:req.body.message,
       date:getDateTime(new Date()),
-      img:`http://localhost:3000/public/${req.file.filename}`
+      img:`http://3.144.187.146:3000/public/${req.file.filename}`
     }
     messages.push({message})
     io.emit('message', messages);
