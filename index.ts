@@ -16,7 +16,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
-const PORT = 443
+const PORT = 3000
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
