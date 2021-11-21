@@ -18,7 +18,7 @@ app.use(express.json())
 app.use(cors())
 const PORT = 3000
 
-app.use('build/public', express.static(path.join(__dirname, 'build/public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 
 const httpServer = require('http').createServer(app);
