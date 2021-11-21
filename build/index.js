@@ -35,7 +35,7 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 const PORT = 3000;
-app.use('../public', express_1.default.static(path_1.default.join(__dirname, 'public')));
+app.use('/public', express_1.default.static(path_1.default.join(__dirname, 'public')));
 const httpServer = require('http').createServer(app);
 const io = require('socket.io')(httpServer, {
     cors: { origin: '*' }
@@ -49,7 +49,7 @@ app.post('/photo', middlewareLogin_1.isLogged, upload_1.default.single('foto'), 
             user: req.body.user,
             message: req.body.message,
             date: (0, date_1.default)(new Date()),
-            img: `http://3.144.187.146:3000/public/${req.file.filename}`
+            img: `http://3.137.213.29:3000/public/${req.file.filename}`
         };
         messages.push({ message });
         io.emit('message', messages);
