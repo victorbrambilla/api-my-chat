@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.ts",
-    "build": "tsc --project ./",
-    "serve": "tsc src/app.ts -w & pm2 start dist/app.js --watch"
+    "build": "tsc --project ./"
+   
   },
   "repository": {
     "type": "git",
