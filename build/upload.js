@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const multer_1 = __importDefault(require("multer"));
 const storageConfig = multer_1.default.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, "/build/public/");
+        cb(null, "public/");
     },
     filename: function (req, file, cb) {
         let randomName = Math.floor(Math.random() * 9999);
