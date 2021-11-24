@@ -20,7 +20,7 @@ let getDateTime=(date: Date)=> {
     }
   
     let time = {
-      hour: date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds(),
+      hour: date.getHours()-4 + ':' + date.getMinutes() + ':' + date.getSeconds(),
       msg: dayMessage
     }
   

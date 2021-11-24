@@ -29,7 +29,6 @@ const io = require('socket.io')(httpServer, {
 app.post('/login', user.login)
 app.post('/users', upload.single('avatar'), user.register)
 
-
 app.post('/photo',isLogged, upload.single('foto'), (req:any, res:any)=>{
   try {
     
